@@ -19,10 +19,10 @@ const Hero: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-slate-50/90"></div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center">
         <Reveal variant="fade-up" delay={200}>
             <div className="inline-block px-5 py-2 bg-white/30 backdrop-blur-md text-slate-900 rounded-full text-sm font-bold tracking-wide border border-white/40 shadow-sm mb-6 hover:scale-105 transition-transform cursor-default">
-                Product Manager | Senior BA
+                Sr. BA | Product Owner
             </div>
         </Reveal>
 
@@ -36,8 +36,8 @@ const Hero: React.FC = () => {
         </Reveal>
 
         <Reveal variant="fade-up" delay={600}>
-            <div className="flex justify-center mb-10">
-                <p className="text-xl text-slate-800 leading-relaxed max-w-2xl font-medium drop-shadow-sm">
+            <div className="flex justify-center mb-10 px-4">
+                <p className="text-lg sm:text-xl text-slate-800 leading-relaxed max-w-5xl font-medium drop-shadow-sm">
                 I help organizations turn complex business processes into simple, scalable, and user-friendly digital solutions. 
                 With 9+ years of experience, I bridge the gap between ambiguity and measurable results.
                 </p>
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
             <a 
                 href="#contact"
-                className="flex items-center justify-center gap-2 bg-slate-900/90 text-white px-8 py-4 rounded-full font-medium hover:bg-slate-800 transition-all hover:shadow-xl hover:shadow-slate-500/20 hover:-translate-y-1 active:scale-95 active:translate-y-0 backdrop-blur-sm"
+                className="flex items-center justify-center gap-2 bg-slate-900/90 text-white px-8 py-4 rounded-full font-medium hover:bg-slate-800 transition-all hover:shadow-xl hover:shadow-slate-500/20 hover:-translate-y-1 active:scale-95 active:translate-y-0 backdrop-blur-sm w-full sm:w-auto"
             >
                 Let's Connect <ArrowRight size={20} />
             </a>
@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
                 href={RESUME_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-white/40 backdrop-blur-md text-slate-900 border border-white/50 px-8 py-4 rounded-full font-medium hover:bg-white hover:text-blue-700 transition-all hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 active:scale-95 active:translate-y-0"
+                className="flex items-center justify-center gap-2 bg-white/40 backdrop-blur-md text-slate-900 border border-white/50 px-8 py-4 rounded-full font-medium hover:bg-white hover:text-blue-700 transition-all hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 active:scale-95 active:translate-y-0 w-full sm:w-auto"
             >
                 <Download size={20} /> Download Resume
             </a>

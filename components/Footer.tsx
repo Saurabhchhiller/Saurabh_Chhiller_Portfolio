@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <h2 className="text-2xl font-bold text-white mb-2 tracking-tight">Saurabh Chhiller</h2>
-            <p className="text-sm mb-4 font-medium opacity-80">Product Manager & Senior Business Analyst</p>
+            <p className="text-sm mb-4 font-medium opacity-80">Sr. Business Analyst & Product Owner</p>
             
             <a 
               href="#contact"

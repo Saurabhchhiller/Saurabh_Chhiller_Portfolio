@@ -14,15 +14,20 @@ const Reveal: React.FC<RevealProps> = ({
   variant = 'fade-up', 
   delay = 0, 
   className = "",
-  threshold = 0.15
+  threshold = 0.1
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Intersection Observer to detect scroll
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          // Once visible, we can stop observing to save resources
+          if (ref.current) observer.unobserve(ref.current);
+        }
       },
       {
         threshold: threshold,
@@ -34,12 +39,19 @@ const Reveal: React.FC<RevealProps> = ({
       observer.observe(ref.current);
     }
 
+    // Fallback safety: Ensure content becomes visible after a short timeout 
+    // even if observer misses it (common in some iframe/preview environments)
+    const safetyTimer = setTimeout(() => {
+        setIsVisible(true);
+    }, 1000 + delay);
+
     return () => {
       if (ref.current) {
         observer.unobserve(ref.current);
       }
+      clearTimeout(safetyTimer);
     };
-  }, [threshold]);
+  }, [threshold, delay]);
 
   const getTransformStyle = () => {
     switch (variant) {
@@ -66,7 +78,6 @@ const Reveal: React.FC<RevealProps> = ({
     transitionDuration: '1000ms',
     transitionDelay: isVisible ? `${delay}ms` : '0ms',
     transitionProperty: 'transform, opacity, filter',
-    // Spring-like bezier curve for iOS feel
     transitionTimingFunction: 'cubic-bezier(0.25, 0.8, 0.25, 1)' 
   };
 

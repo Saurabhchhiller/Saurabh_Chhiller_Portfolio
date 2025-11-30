@@ -1,0 +1,283 @@
+import React from 'react';
+
+const Resume: React.FC = () => {
+  return (
+    <div className="bg-gray-100 py-10 print:py-0 print:bg-white text-gray-900 min-h-screen">
+        <style>{`
+            @media print {
+                .no-print { display: none !important; }
+                body { background: white; margin: 0; padding: 0; }
+                .page-break { page-break-before: always; }
+                @page { margin: 0.5in; }
+            }
+            .resume-font {
+                font-family: 'Times New Roman', Times, serif;
+                -webkit-font-smoothing: antialiased;
+            }
+            .resume-header-font {
+                font-family: 'Arial', sans-serif;
+            }
+        `}</style>
+    
+        <div className="no-print fixed top-4 right-4 flex gap-4 z-50">
+            <button 
+                onClick={() => window.print()} 
+                className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-blue-700 transition-colors cursor-pointer flex items-center gap-2"
+            >
+                Print / Save as PDF
+            </button>
+            <a 
+                href="/" 
+                className="bg-gray-700 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-gray-800 transition-colors cursor-pointer no-underline"
+            >
+                Back to Portfolio
+            </a>
+        </div>
+
+        <div className="resume-font max-w-[8.5in] mx-auto bg-white p-12 shadow-xl print:shadow-none print:p-0 min-h-[11in]">
+            
+            {/* Header */}
+            <header className="text-center mb-8">
+                <h1 className="resume-header-font text-3xl font-bold uppercase tracking-wide mb-2">Saurabh Chhiller</h1>
+                <div className="text-sm font-bold mb-2">
+                    Sr. BA | Product Owner | Healthcare & Higher Ed Systems | API & Workflow Expert
+                </div>
+                <div className="text-sm">
+                    (657) 234-6023 | <a href="mailto:schhiller1@gmail.com" className="text-blue-800 underline">schhiller1@gmail.com</a> | <a href="http://www.linkedin.com/in/saurabhbusinessanalyst" className="text-blue-800 underline">http://www.linkedin.com/in/saurabhbusinessanalyst</a>
+                </div>
+            </header>
+
+            {/* Summary */}
+            <section className="mb-6">
+                <h2 className="resume-header-font text-base font-bold uppercase border-b-2 border-black mb-3">Summary</h2>
+                <p className="text-sm leading-relaxed text-justify">
+                    Senior Business Analyst / Product Analyst with 9+ years of experience driving enterprise system implementations across 
+                    healthcare, university systems, and government. Proven success in leading Agile delivery, optimizing business processes, 
+                    and designing scalable product workflows. Adept at stakeholder alignment, API integration, and documentation excellence 
+                    for high-impact platforms like SeRA, UltraTouch®, and IMPEI.
+                </p>
+            </section>
+
+            {/* Skills */}
+            <section className="mb-6">
+                <h2 className="resume-header-font text-base font-bold uppercase border-b-2 border-black mb-3">Skills</h2>
+                <div className="text-sm leading-relaxed space-y-1">
+                    <div><span className="font-bold">Project Management Tools:</span> JIRA, Azure DevOps, MS Project</div>
+                    <div><span className="font-bold">Documentation & Collaboration:</span> Confluence, Lucid chart, SharePoint</div>
+                    <div><span className="font-bold">Design & Development:</span> Balsamiq, Microsoft Azure, Camunda</div>
+                    <div><span className="font-bold">Databases:</span> Oracle, MS SQL Server, PostgreSQL</div>
+                    <div><span className="font-bold">APIs:</span> REST API, SOAP API</div>
+                    <div><span className="font-bold">Productivity:</span> MS Word, Excel, PowerPoint</div>
+                    <div><span className="font-bold">Areas of Expertise:</span> Business Analysis, Product Development, Stakeholder Management, Agile Methodology, Change Management, Quality Assurance, Resource Management, Cross-Cultural Relationship Management, Oral and Written Communication, Training and Facilitation</div>
+                </div>
+            </section>
+
+            {/* Work Experience */}
+            <section className="mb-6">
+                <h2 className="resume-header-font text-base font-bold uppercase border-b-2 border-black mb-4">Work Experience</h2>
+                
+                {/* Stanford */}
+                <div className="mb-5">
+                    <div className="flex justify-between items-baseline font-bold text-sm mb-1">
+                        <div>Sr. Business Analyst / Product Analyst</div>
+                    </div>
+                    <div className="flex justify-between items-baseline text-sm mb-2">
+                        <div className="font-bold">Stanford University, Redwood City</div>
+                        <div className="font-bold">January 2025 - Present</div>
+                    </div>
+                    <ul className="list-disc ml-5 text-sm space-y-0.5 leading-snug">
+                        <li>Translated complex stakeholders need into actionable product features, streamlining the proposal and award lifecycle</li>
+                        <li>Designed intuitive user interfaces across key SeRA modules, reducing user errors and support requests by 30%</li>
+                        <li>Managed Agile Scrum ceremonies as Product Owner, prioritizing user stories and driving high-velocity sprint execution</li>
+                        <li>Identified and resolved system inefficiencies through targeted analysis, accelerating award intake and processing times</li>
+                        <li>Created comprehensive documentation for proposal routing workflows (PDRF), accelerating onboarding and reducing cross-team misunderstandings</li>
+                        <li>Collaborated with development teams to implement scalable, data-driven solutions that support evolving research workflows</li>
+                        <li>Improved user satisfaction scores by delivering targeted enhancements to SeRA based on direct stakeholder feedback and analytics</li>
+                    </ul>
+                </div>
+
+                {/* CARB */}
+                <div className="mb-5">
+                    <div className="flex justify-between items-baseline font-bold text-sm mb-1">
+                        <div>Sr. Business Analyst / Quality Analyst</div>
+                    </div>
+                    <div className="flex justify-between items-baseline text-sm mb-1">
+                        <div className="font-bold">California Air Resource Board (via Qual Apps), Remote</div>
+                        <div className="font-bold">December 2022 – October 2024</div>
+                    </div>
+                    <p className="text-sm mb-2">Executed detailed business analysis to identify challenges and opportunities, facilitating the creation of actionable solutions for the IMPEI project</p>
+                    <ul className="list-disc ml-5 text-sm space-y-0.5 leading-snug">
+                        <li>Established strong relationships with 20+ stakeholders by conducting interviews and facilitating workshops to surface and validate requirements, leading to a 20% increase in stakeholder satisfaction</li>
+                        <li>Created and refined detailed swim lane diagrams and process maps, utilizing Lucid Chart to enhance clarity and reduce misunderstandings, which improved team efficiency by 30%</li>
+                        <li>Developed 50+ comprehensive use cases and user stories using JIRA to streamline development processes in an Agile environment, ensuring clarity in system functionalities</li>
+                        <li>Documented high-level requirements, Epics, and user stories, utilizing Confluence to ensure alignment with business objectives and effective communication with cross-functional teams</li>
+                        <li>Supported the development of Organizational Change Management (OCM) deliverables, contributing to a 30% reduction in onboarding time and a 25% increase in user satisfaction during transitions</li>
+                        <li>Implemented 10+ process improvements reflective of business analysis insights to optimize workflows and reduce operational costs by 20%</li>
+                        <li>Led functional testing activities for the IMPEI project, ensuring business requirements were met and achieving a 95% defect-free release</li>
+                        <li>Managed requirements traceability throughout the Agile project lifecycle, ensuring alignment during design and testing phases to achieve successful business outcomes</li>
+                    </ul>
+                </div>
+
+                <div className="page-break"></div>
+                
+                {/* D2 Solutions */}
+                <div className="mb-5 pt-8 print:pt-4">
+                    <div className="flex justify-between items-baseline font-bold text-sm mb-1">
+                        <div>Sr. Business System Analyst</div>
+                    </div>
+                    <div className="flex justify-between items-baseline text-sm mb-1">
+                        <div className="font-bold">D2 Solutions, Remote</div>
+                        <div className="font-bold">April 2021 - November 2022</div>
+                    </div>
+                    <p className="text-sm mb-2">D2 offers a unique blend of consulting experience and SaaS technology solutions that empower healthcare leaders to enhance business needs and move even closer to their goals.</p>
+                    <ul className="list-disc ml-5 text-sm space-y-0.5 leading-snug">
+                        <li>UltraTouch Engage (Patient Engagement & Assessments) - Developed to bring manufacturers, providers, pharmacies, and patients closer together, enhancing product access and improving patient care outcomes</li>
+                        <li>UltraTouch Verify (Prior Authorization Automation) – Enhanced this automated PA and BV platform to reduce average authorization and verification time to less than 24 hours</li>
+                        <li>Led the full lifecycle delivery of UltraTouch® Engage, a patient engagement platform designed to reduce therapy abandonment and support pharmacists in monitoring adverse events through structured follow-ups and outreach automation</li>
+                        <li>Designed and delivered a mobile survey feature allowing elderly patients to respond to pharmacist outreach digitally via SMS; captured structured responses and routed alerts to pharmacists for timely clinical review</li>
+                        <li>Implemented follow-up workflows for 1-day, 7-day, 1-month, and 6-month patient assessments to monitor side effects and ensure pharmacies remained compliant with federal adverse event reporting requirements</li>
+                        <li>Designed RESTful API integrations across pharmacy and patient systems to support real-time onboarding and therapy access</li>
+                        <li>Created detailed data mapping documents and source-to-target logic for integrating pharmacy, patient, and claims data from legacy systems into the UltraTouch platform</li>
+                        <li>Collaborated with development teams to clarify complex requirements for patient outreach, survey automation, and assessment workflows</li>
+                        <li>Acted as Product Owner during analysis and design phases for UltraTouch® Engage, translating stakeholder needs into Agile-ready user stories</li>
+                        <li>Created data mapping specs and validation logic to ensure secure and accurate transfer of pharmacy, patient, and claims data</li>
+                        <li>Developed validation rules, exception-handling logic, and compliance checklists to ensure data quality and adherence to regulatory standards including SOX, HIPAA, and GDPR</li>
+                    </ul>
+                </div>
+
+                 {/* Highmark */}
+                 <div className="mb-5">
+                    <div className="flex justify-between items-baseline font-bold text-sm mb-1">
+                        <div>Sr. Consultant Business Analyst</div>
+                    </div>
+                    <div className="flex justify-between items-baseline text-sm mb-1">
+                        <div className="font-bold">Highmark (via SDLC Partners) Remote</div>
+                        <div className="font-bold">December 2020 - April 2021</div>
+                    </div>
+                    <p className="text-sm mb-2 text-justify">Highmark Health initiated a large-scale digital transformation to modernize its healthcare insurance platform by transitioning from a monolithic architecture to a modular, microservices-based ecosystem. The goal was to enhance scalability, deployment speed, and user experience. As part of this initiative, the Member Portal was re-engineered as an independent micro-product, enabling real-time data exchange across services via APIs and significantly improving member access to coverage and claims information.</p>
+                    <ul className="list-disc ml-5 text-sm space-y-0.5 leading-snug">
+                        <li>Led the business analysis and roadmap planning for decomposing the legacy monolith into micro-products, starting with the Member Portal to improve self-service and release agility</li>
+                        <li>Acted as Product Owner, defining user stories, managing the backlog, and leading Agile ceremonies to deliver sprint goals</li>
+                        <li>Facilitated technical workshops to define API contracts for secure, real-time data exchange between services</li>
+                        <li>Delivered clear specifications and coordinated UAT, reducing iteration cycles and ensuring high-quality feature releases.</li>
+                        <li>Helped reduce development cycle times through proactive QA support and continuous stakeholder engagement</li>
+                    </ul>
+                </div>
+
+                 {/* CareMetx */}
+                 <div className="mb-5">
+                    <div className="flex justify-between items-baseline font-bold text-sm mb-1">
+                        <div>Sr. Business Analyst</div>
+                    </div>
+                    <div className="flex justify-between items-baseline text-sm mb-1">
+                        <div className="font-bold">CareMetx, Oakland, CA</div>
+                        <div className="font-bold">September 2019 - December 2020</div>
+                    </div>
+                    <p className="text-sm mb-2">CareMetx is a Reimbursement Hub Services Organization that provides commercialization support to pharmaceutical and biotechnology drug manufacturers and tracking and communicating updates on enrolment for patients and claims management.</p>
+                    <ul className="list-disc ml-5 text-sm space-y-0.5 leading-snug">
+                        <li>Facilitated communication among external, interface, and internal stakeholders to ensure uninterrupted project progress</li>
+                        <li>Developed artifacts such as CR Request forms, SLA documentation, and Mutual Data Services agreements to support project requirements</li>
+                        <li>Created efficient swim lane diagrams to streamline project coordination</li>
+                        <li>Analyzed HLD and LLD systems flow with data and protocol modalities to ensure alignment with project objectives</li>
+                        <li>Contributed to Backlog grooming and sprint review in the Agile model</li>
+                        <li>Excelled in creating artifacts like BRD, Functional and Interface specs (REST and SOAP-based APIs)</li>
+                        <li>Authored explanatory UML, Flowchart, wireframes, and Data modeling diagrams using MS Visio, Balsamiq, Snagit</li>
+                        <li>Worked on EDI to create Data mapping documents, Field, and database analysis (EDI 856 & 997)</li>
+                        <li>Closely worked with UAT and QA teams to ensure the solution was delivered per business expectations</li>
+                        <li>Documented requirements in accordance with high-level IT policies and client performance standards</li>
+                    </ul>
+                </div>
+
+                <div className="page-break"></div>
+
+                 {/* CVS Health */}
+                 <div className="mb-5 pt-8 print:pt-4">
+                    <div className="flex justify-between items-baseline font-bold text-sm mb-1">
+                        <div>Lead Consultant / Business Analyst</div>
+                    </div>
+                    <div className="flex justify-between items-baseline text-sm mb-1">
+                        <div className="font-bold">CVS Health, Richardson, Texas</div>
+                        <div className="font-bold">November 2018 - March 2019</div>
+                    </div>
+                    <p className="text-sm mb-2 text-justify">CVS Health is an innovative Pharmacy company to help people for better health. This project was about providing new business and projection reports to businesses based on their role and designation. Based on the need, the user can view Day to Day, Weekly, Monthly, and quarterly reports.</p>
+                    <ul className="list-disc ml-5 text-sm space-y-0.5 leading-snug">
+                        <li>Gathered process, data related requirements from the business and gained insights into the purpose for value addition for a future state in existing reporting</li>
+                        <li>Participated in Project management process and provided technical and functional assistance in identifying, evaluating, and developing systems and procedures that are cost effective and meet user requirements</li>
+                        <li>Identified the Data Elements from the Source to Target tables for the Data Warehouse team</li>
+                        <li>Performed Analysis - source system data validation, impact analysis of downstream reports/applications, and database research by leveraging SQL on large volumes of data</li>
+                        <li>Hands-on experience with Tableau to configure reports as per client requirements</li>
+                        <li>Developed SQL Queries, wrote test cases, validated the data using SQL, and signed off for UAT</li>
+                    </ul>
+                </div>
+
+                 {/* Moody's */}
+                 <div className="mb-5">
+                    <div className="flex justify-between items-baseline font-bold text-sm mb-1">
+                        <div>Technical Product Analyst</div>
+                    </div>
+                    <div className="flex justify-between items-baseline text-sm mb-1">
+                        <div className="font-bold">Moody's Analytics, San Francisco, CA</div>
+                        <div className="font-bold">May 2018 - October 2018</div>
+                    </div>
+                    <p className="text-sm mb-2 text-justify">Moody's Analytics Credit Lens application helps financial institutions make better decisions in an efficient way for the Loan Origination Process. The application's major feature was the risk assessment of different types of entities.</p>
+                    <ul className="list-disc ml-5 text-sm space-y-0.5 leading-snug">
+                        <li>Conducted requirement analysis through detailed interactions with product owners and stakeholders, ensuring precise project specifications.</li>
+                        <li>Created and assigned the user stories in Rally based on technical specifications</li>
+                        <li>Led backlog-grooming sessions to estimate user stories with story points and assign business value by working with the Product Manager and clients to prioritize development tasks</li>
+                        <li>Created Report template files in DevExpress like Admin Reports, Call Reports, and Credit Presentation Reports</li>
+                        <li>Created the BPMN workflow diagram in Camunda, defining all the users as in the requirements</li>
+                        <li>Collected and analyzed data to present key information visually, optimizing business functions</li>
+                        <li>Created the Data mapping document to integrate Credit Lens with Finasta (Laser Pro)</li>
+                        <li>Assisted with Production Issues, escalated, and coordinated with the team for a solution</li>
+                    </ul>
+                </div>
+
+                 {/* Wells Fargo */}
+                 <div className="mb-5">
+                    <div className="flex justify-between items-baseline font-bold text-sm mb-1">
+                        <div>System Analyst</div>
+                    </div>
+                    <div className="flex justify-between items-baseline text-sm mb-1">
+                        <div className="font-bold">Wells Fargo, San Antonio, TX</div>
+                        <div className="font-bold">August 2016 - May 2018</div>
+                    </div>
+                    <p className="text-sm mb-2 text-justify">Wells Fargo is a diversified financial services company providing banking, insurance, investments, mortgage, and consumer finance worldwide. This project involved converting existing HP ALM Quality Center schemas to a new template schema leveraging the Assure Harmonizer and Standardizer Tools. The role was to assist the application SME with analysis, data mapping, and conversion.</p>
+                    <ul className="list-disc ml-5 text-sm space-y-0.5 leading-snug">
+                        <li>Elicited system requirements using various techniques such as interviews and Document Analysis</li>
+                        <li>Performed the Analysis of Business requirements from Users for Data conversion</li>
+                        <li>Performed the Data Analysis, Data Mapping for Schema conversion</li>
+                        <li>Performed the Data Analysis, Data Mapping for Schema conversion</li>
+                        <li>Used Assure Tools to access, visualize, and standardize the data from different schemas</li>
+                        <li>Involved in the Migration of projects across the different servers per the requirement of End Users</li>
+                        <li>Conducted Walkthrough/familiarization sessions of mapping documents for End Users</li>
+                        <li>Involved in fixing the defects raised by End-Users for converted HP ALM Quality Center schemas</li>
+                        <li>Used MY-SQL functions to extract data from existing HP ALM Quality Center schemas to create a client mapping document</li>
+                        <li>Increased Client Satisfaction by 20% (Source: Number of tickets)</li>
+                        <li>Involved in fixing the defects raised by End-Users for converted HP ALM Quality Center schemas</li>
+                    </ul>
+                </div>
+            </section>
+
+            {/* Certifications */}
+            <section className="mb-6">
+                <h2 className="resume-header-font text-base font-bold uppercase border-b-2 border-black mb-3">Certifications</h2>
+                <ul className="list-disc ml-5 text-sm space-y-1">
+                    <li>Professional Scrum Product Owner (PSPO) – July 2018</li>
+                    <li>Professional Scrum Master (PSM I) – November 2020</li>
+                </ul>
+            </section>
+
+            {/* Education */}
+            <section>
+                <h2 className="resume-header-font text-base font-bold uppercase border-b-2 border-black mb-3">Education</h2>
+                <div className="text-sm">
+                    <div className="font-bold">B.Tech, Mechanical Engineering – Kurukshetra University, India – August 2007 - July 2011</div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+  );
+};
+
+export default Resume;
