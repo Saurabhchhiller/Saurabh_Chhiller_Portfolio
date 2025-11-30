@@ -1,6 +1,6 @@
 import { ExperienceItem, SkillCategory, EducationItem, CertificationItem } from './types';
 
-export const RESUME_LINK = "saurabh-chhiller-portfolio.vercel.app//resume.html";
+export const RESUME_LINK = "https://saurabh-chhiller-portfolio-git-main-saurabhchhillers-projects.vercel.app/";
 
 export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/saurabhbusinessanalyst",
