@@ -1,6 +1,7 @@
 import { ExperienceItem, SkillCategory, EducationItem, CertificationItem } from './types';
 
-export const RESUME_LINK = "https://saurabh-chhiller-portfolio.vercel.app//resume.html";
+// UPDATED LINE: Sirf slash use karein. Ye automatic correct path le lega.
+export const RESUME_LINK = "/resume.html";
 
 export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/saurabhbusinessanalyst",
